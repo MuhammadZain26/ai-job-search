@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Zain Ul Hassan
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Zain Ul Hassan, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,79 +10,86 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Zain Ul Hassan
+- **Location:** Lahore, Pakistan (based in Shalimar Town; Lahore on-site jobs only - see Deal-breakers)
+- **Contact details:** deliberately NOT stored in tracked files. Phone, email and LinkedIn URL live in `documents/cv/contact.md` (gitignored). `/apply` reads them from there when generating the (also gitignored) `cv/main_<company>_<role>.tex` and `cover_letters/cover_<company>_<role>.tex`. Never write them into CLAUDE.md, a skill file, `cv/main_example.tex` or any other tracked file.
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
-  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
-  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
-  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
-  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
-  04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+  | Urdu | Native |
+  | English | Intermediate (professional use; a posting asking for "fluent" English is a FLAG, not a fail) |
+  | Punjabi | Conversational |
+- **CV language:** English
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Self-employed / freelance business development background; looking for a full-time on-site job in Lahore, available to join as soon as possible
+- **CV headline:** "Business Development Executive | LinkedIn Lead Generation & Sales Navigator | B2B Sales"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **BS in Computer Science** (2018-2022) - National College of Business Administration & Economics (NCBA&E), Lahore
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+Business-development / sales-related experience is about 2 years (2024-2026; the first three roles below overlap in time). The Techfy.io backend role is **software engineering, not business development, and must not be counted as BD or sales experience** when checking a posting's experience requirement.
+
+- **Client-Facing Delivery Lead (Freelance)** (Jan 2026 - Jul 2026) - **Fillo Workforce** (Lahore, Pakistan; freelance engagement)
+  - Managed concurrent client accounts to agreed scope, handling relationships and change requests directly with clients
+  - Kept clients aligned by translating technical detail into clear, persuasive recommendations
+- **Founder** (Jan 2025 - Dec 2025) - **Scraping Genius** (Lahore, Pakistan; B2B data extraction services)
+  - Ran LinkedIn-led outbound prospecting into data-heavy sectors, using Sales Navigator to build target account lists and reach decision-makers matching the ideal client profile
+  - Refined positioning and messaging continuously against live prospect and client feedback
+  - Built the client base end to end: identifying needs, positioning the right service and pricing engagements
+- **Business Development Lead (Freelance)** (2024 - 2025) - **Self-Employed** (Remote; B2B clients across US, UK and UAE)
+  - Generated and qualified B2B leads through LinkedIn Sales Navigator and organic LinkedIn outreach, identifying decision-makers and sending personalized connection requests and follow-up sequences
+  - Ran the full B2B sales cycle: discovery calls, qualification, proposals, presentations, follow-ups, objection handling, negotiation and closing
+  - Wrote personalized proposals and follow-up messages per prospect; turned one-off projects into repeat work and referrals; grew account value post-delivery by surfacing adjacent client needs
+- **Backend Engineer** (2022 - 2024) - **Techfy.io** (Remote & Lahore, Pakistan) - *software engineering, not BD*
+  - Built automation systems in Python and REST APIs in Node.js; first-hand understanding of software delivery that supports credible conversations with technical buyers and accurate scoping
+
+**No sales figures, lead counts, conversion rates or revenue are recorded for any role. Never invent them.**
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** LinkedIn Sales Navigator, B2B lead generation and outbound prospecting, personalized outreach and follow-up sequences, discovery and lead qualification, proposals and presentations, client communication
+- **Secondary:** Objection handling, negotiation, closing, pipeline management, CRM records, KPI and conversion tracking, Python, Node.js, REST APIs, data extraction and automation
+- **Domain:** IT services, software development, data extraction, B2B services (clients in the US, UK and UAE)
+- **Software:** LinkedIn Sales Navigator, CRM tools (specific CRM not stated), Python, Node.js
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Certified Scrum Master** - credential held; issuer and date not yet provided (confirm before listing on a CV). Mention only where relevant to the role.
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- None
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- None
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+Self-reported strengths only; no formal assessment taken. Nothing below is inferred beyond what was stated.
+- **Strengths:** Client communication, B2B lead generation, LinkedIn prospecting, personalized outreach, follow-ups, client handling, understanding technical products
+- **Growth areas:** Not stated - do not invent any
+- **Thrives in:** Not stated - do not invent any
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Genuine business development, B2B sales and client acquisition roles with a proper fixed salary
+- Selling technical products and services, where a software development background is an advantage
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Software houses and IT services: [no specific companies named yet]
+- SaaS and fintech: [no specific companies named yet]
+- E-commerce and other industries are also acceptable
+- Target roles: Business Development Executive, Business Development Representative (BDR), Sales Executive, Lead Generation Executive, Client Acquisition, and other relevant junior business roles
 
 ### Deal-breakers
-<!-- Hard constraints on job search. Language requirements are handled separately and
-automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+Hard filters. Enforce strictly on every posting in `/scrape`, `/rank` and `/apply`:
+- **Location:** Lahore, on-site only. A posting outside Lahore is FAIL. Remote is FAIL. A hybrid role with a Lahore office is FLAG for the user's judgment.
+- **Areas to avoid:** Bahria Town and Wapda Town (FAIL). Any other Lahore area is acceptable; Shalimar Town is the home base, so nearer areas are a plus.
+- **Salary:** minimum PKR 70,000 per month, fixed. Below that is FAIL. If the posting states no salary, mark it **"Unknown - Check"** (do not reject, do not assume it passes).
+- **Experience required:** maximum 2 years. A posting requiring 3+ years is FAIL. A range such as "2-3 years" is a FLAG. "Fresher", "0-1", "1-2" and "up to 2 years" pass. Do not count backend engineering toward BD experience; the candidate's BD experience is about 2 years.
+- **Commission-only pay** is FAIL. A fixed salary plus commission or incentives is fine.
+- **Call-centre-style cold-calling jobs** (high-volume phone dialling, telesales or telemarketing floors) are FAIL.
+- **MLM, pyramid-style or "network marketing" businesses** are FAIL.
+- **Prefer** genuine business development, B2B sales and client acquisition roles with a proper fixed salary.
+- **Never submit an application, send a message, or push to git without the user's explicit approval.** Drafting is fine; submitting is always the user's call.
+- **Privacy:** the user accepts that the profile in tracked files may be publicly visible, but asked that phone number, email and other private contact details stay out of tracked files (see Contact details above).
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

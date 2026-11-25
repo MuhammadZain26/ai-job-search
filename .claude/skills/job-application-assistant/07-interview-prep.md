@@ -12,46 +12,68 @@ Structure answers as: **Situation** (context), **Task** (your responsibility), *
 
 Keep answers to 1-2 minutes. Be specific. End with what you learned or would do differently.
 
-## Ready-Made STAR Examples
+## STAR Candidates (Complete Manually)
 
-<!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
+The CV records responsibilities but **no figures or outcomes**, so no full STAR answers are written here: inventing Results would be fabrication. Each stub below holds only what the CV states. Fill in Situation, Task, Action and Result with real details (and real numbers, if you have them) before using them in an interview.
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 1. LinkedIn lead generation for B2B clients (outbound prospecting)
+**Source:** CV - Business Development Lead (Freelance) 2024-2025; Founder, Scraping Genius 2025
+**What happened:** Used LinkedIn Sales Navigator to build target account lists and reach decision-makers, with personalized connection requests and follow-up sequences.
+**Why it matters:** "Tell me about your lead generation process", "How do you find and qualify prospects?", "How do you personalize outreach?"
+- Situation:
+- Task:
+- Action:
+- Result:
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 2. Winning a paid engagement through discovery (needs and pain points)
+**Source:** CV - Business Development Lead (Freelance) 2024-2025
+**What happened:** Won paid engagements by diagnosing each prospect's needs and pain points before recommending a solution.
+**Why it matters:** "Describe a deal you won", "How do you handle discovery calls?", "How do you qualify buying intent?"
+- Situation:
+- Task:
+- Action:
+- Result:
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 3. Turning one-off work into repeat work and referrals (follow-up)
+**Source:** CV - Business Development Lead (Freelance) 2024-2025
+**What happened:** Turned one-off projects into repeat work and referrals through consistent follow-up, and grew account value by surfacing adjacent needs clients had not scoped.
+**Why it matters:** "How do you build long-term client relationships?", "Tell me about upselling or account growth"
+- Situation:
+- Task:
+- Action:
+- Result:
 
-<!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
+### 4. Building a client base from scratch (Scraping Genius)
+**Source:** CV - Founder, Scraping Genius (Jan-Dec 2025)
+**What happened:** Built the client base end to end: identifying needs, positioning the service, pricing engagements, and refining messaging against live feedback.
+**Why it matters:** "Tell me about a time you took initiative", "How do you price a service?", "Why did you stop / what did you learn?"
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### 5. Translating technical detail for clients (Fillo Workforce)
+**Source:** CV - Client-Facing Delivery Lead (Freelance), Jan-Jul 2026
+**What happened:** Managed concurrent client accounts to scope, handled change requests, and turned technical detail into clear recommendations.
+**Why it matters:** "How do you handle scope changes?", "How do you explain technical products to non-technical buyers?"
+- Situation:
+- Task:
+- Action:
+- Result:
 
 ## Common Tough Questions
 
 ### "Why did you leave [previous company]?"
-> [PREPARE YOUR ANSWER - be honest, forward-looking, no negativity about former employer]
+> [TO COMPLETE with the real reason. Freelance and founder roles ended in Dec 2025 and Jul 2026; seeking a stable full-time on-site role with a team. Do not invent reasons.]
 
 ### "You don't have [specific skill/experience]."
-> [PREPARE YOUR ANSWER - acknowledge the gap, bridge to adjacent experience, show willingness to learn]
+> Honest bridge: BD experience is about 2 years, all freelance or self-founded, with no employer-backed sales team yet. Bridge with the full-cycle B2B work and the technical background; show willingness to learn the company's process and CRM. No invented figures.
 
 ### "Where do you see yourself in 5 years?"
-> [PREPARE YOUR ANSWER - show ambition aligned with the role's growth path]
+> [TO COMPLETE by the user. Likely direction: grow within B2B business development / account management.]
 
 ### "What's your biggest weakness?"
-> [PREPARE YOUR ANSWER - genuine weakness with concrete mitigation strategy]
+> [TO COMPLETE by the user. No weakness has been stated; do not invent one. English is Intermediate: speak plainly and prepare key phrases in advance.]
 
 ### "Why this company specifically?"
 > Customize per company. Must reference: specific projects, company values, market position, or team structure. Never give a generic answer.

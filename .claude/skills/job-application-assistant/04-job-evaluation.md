@@ -46,6 +46,27 @@ Judge the level comparison the same way you judge everything else in this framew
 
 **Worked example:** a candidate whose Languages table lists Spanish (Native) and English (B1/B2). A posting requiring "fluent Russian" → **FAIL**, Russian isn't declared at all. A posting requiring "fluent English" → **FLAG**, English is declared but "fluent" plausibly exceeds B1/B2 — score and draft the application, but tell the candidate this posting's bar may be a stretch and let them decide. A posting requiring "conversational English" or unspecified English → **PASS**, B1/B2 clears a "conversational" bar cleanly.
 
+## Candidate Hard Filters — run with the gates above, before scoring
+
+These come from the candidate's Deal-breakers in CLAUDE.md. Each posting gets a verdict per filter. A FAIL is a hard stop (do not score, do not draft; report the quoted line to the user). A FLAG is scored and drafted normally but surfaced explicitly. Never silently drop or silently pass a posting.
+
+| Filter | FAIL | FLAG | PASS |
+|---|---|---|---|
+| **Location** | Outside Lahore; remote / work from home; Bahria Town or Wapda Town | Hybrid with a Lahore office; location unstated ("Lahore" implied but no address) | On-site in Lahore (any other area) |
+| **Salary** | Stated pay below PKR 70,000/month, or a range whose top is below 70,000 | **"Unknown – Check"** when no salary is stated (never auto-reject); a range straddling 70,000 | Stated fixed pay of PKR 70,000/month or more |
+| **Required experience** | Requires 3+ years (any wording: "3+ years", "minimum 3", "3-5 years") | "2-3 years" or other ambiguous wording; "experience required" with no number | Fresher, 0-1, 1-2, "up to 2 years", or no experience stated |
+| **Pay structure** | Commission-only, unpaid trial, or income entirely incentive-based | Fixed salary stated only as "attractive package"; commission-heavy structure with a fixed base | Proper fixed salary (commission or incentives on top is fine) |
+| **Cold-calling** | Call-centre-style telesales / telemarketing / high-volume dialling roles | Role includes some outbound calling alongside B2B prospecting | Role is B2B business development, LinkedIn or email outreach, or client acquisition |
+| **MLM / pyramid** | Network marketing, MLM, recruit-others income, joining fee | Vague "business partner" or "associate" wording with no clear employer | A real employer with a salaried role |
+
+**Experience counting:** the candidate has about 2 years of business-development / sales experience (2024-2026). The Techfy.io backend role (2022-2024) is software engineering and must never be counted as BD experience when judging a posting's requirement, in either direction: do not claim it, and do not reject a posting because of it.
+
+**Salary notes:** postings in Pakistan often omit pay. Report "Unknown – Check" and suggest the user confirm pay with the recruiter before applying. Convert other currencies and annual or monthly figures to PKR per month when stated, and show your arithmetic. Do not guess missing salaries.
+
+**Approval rule:** never submit an application, send a message to an employer or recruiter, or push to git without the user's explicit approval.
+
+**Eligibility Gate note:** the candidate is a Pakistani resident applying in Pakistan, so the Eligibility Gate above rarely applies. Still FAIL a posting that requires a citizenship or residency the candidate does not hold.
+
 ## Scoring Dimensions
 
 Evaluate each job posting against these five dimensions:
@@ -60,9 +81,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** LinkedIn Sales Navigator and LinkedIn lead generation, B2B outbound prospecting and personalized outreach, discovery and qualification, proposals, follow-up, client communication
+**Moderate match areas:** Objection handling, negotiation and closing, pipeline and CRM records, KPI tracking, Python / Node.js / REST APIs (useful for technical-product sales), data extraction and automation
+**Weak match areas:** Formal sales-team experience at an employer (all BD work was freelance or self-founded), named CRMs (e.g. Salesforce, HubSpot, Zoho: not stated), cold-calling at volume, English "fluent" bars, quantified sales results (none recorded), field sales, retail or FMCG sales
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +95,9 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Business development, lead generation and client acquisition for IT services, software and data-extraction services (about 2 years, freelance and founder)
+**Moderate:** Client-facing delivery and account management; technical-product sales to technical buyers (backed by a software engineering background)
+**Entry-level:** Sales Executive roles at established companies, BDR / SDR roles in SaaS, inside-sales team environments, sales management
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -91,10 +112,12 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
-- Frequent international travel: FLAG (discuss with user)
+- On-site in Lahore (any area except Bahria Town and Wapda Town): PASS; areas nearer Shalimar Town are a plus
+- Hybrid with a Lahore office: FLAG (discuss with user)
+- Remote / work from home: FAIL (deal-breaker)
+- Outside Lahore, or Bahria Town / Wapda Town: FAIL (deal-breaker)
+- Frequent travel: FLAG (discuss with user)
+- Also apply every row of "Candidate Hard Filters" above
 
 ### 5. Career Alignment & Motivation (0-100)
 Does this role advance career goals and contain tasks that energize?
@@ -107,21 +130,23 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Land a full-time, on-site business development, sales or client acquisition role in Lahore with a proper fixed salary (PKR 70,000/month or more), as soon as possible
+- Grow into a B2B business development / account management track, ideally selling IT services, software or SaaS where the software background is an advantage
+- Build verifiable, employer-backed sales experience and measurable results (the current BD experience is freelance or self-founded)
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize (stated): B2B lead generation, LinkedIn prospecting, personalized outreach and follow-up, client handling, technical-product conversations
+- Tasks that drain: not stated, except the deal-breakers (cold-calling floors, commission-only, MLM). Do not invent others.
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: needs a stable fixed salary of PKR 70,000/month or more; available to join immediately
+- **Flexibility**: on-site in Lahore only; commute base is Shalimar Town
+- **Professional development**: employer-backed BD / sales experience, exposure to B2B and technical products
 
 ### 6. Salary Benchmark (Optional)
+
+No `salary_data.json` is configured for this candidate. Skip the tool lookup. The only salary check is the PKR 70,000/month hard filter above.
 
 If the salary lookup tool is configured (`salary_data.json` exists), look up the company:
 

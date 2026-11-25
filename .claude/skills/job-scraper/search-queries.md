@@ -1,123 +1,154 @@
 # Search Queries for Job Scraper
 
-<!-- SETUP: Customize these queries based on your skills, target roles, and location -->
+Candidate: Zain Ul Hassan. Market: Lahore, Pakistan. Hard filters (see `04-job-evaluation.md` "Candidate Hard Filters" and CLAUDE.md Deal-breakers): **Lahore on-site only, minimum PKR 70,000/month (unstated salary = "Unknown – Check"), maximum 2 years' required experience (3+ = reject), no commission-only, no call-centre cold-calling, no MLM, no remote.**
 
 ## Installed portal CLIs (primary for `/scrape`)
 
-`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. None ship with AI Job Search: copy the ones for your market from [community-portals](https://github.com/ai-job-search-dev/community-portals) (e.g. `linkedin-search`, `freehire-search` under `portals/global/`), or build one with `/add-portal`. You do **not** need a matching `site:` line below for those CLIs to run.
+`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. None are installed yet. The Pakistani boards below are not known to have a community portal, so `/scrape` falls back to WebSearch (`site:` queries) for them. Options, in order:
+1. Use the WebSearch fallback below (works now, no install).
+2. Copy the global LinkedIn portal (`portals/global/linkedin-search` in https://github.com/ai-job-search-dev/community-portals) into `.agents/skills/` after reading its code (needs Bun). Printed prompt for you to paste:
+   > Copy https://github.com/ai-job-search-dev/community-portals/tree/main/portals/global/linkedin-search into `.agents/skills/` and show me its code and what it does. Once I confirm, run `python3 tools/install_portal_clis.py`.
+3. Generate a portal for Indeed Pakistan, Rozee.pk or Mustakbil with `/add-portal` (it declines auth-walled or bot-blocking sites).
 
-The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
-
-**Language scope:** write every query category in every language listed in your CLAUDE.md Languages table (typically 1-2, sometimes more). A posting requiring a language you have *not* declared, as a job condition, is excluded before scoring; a posting requiring a *higher level* than you declared in a language you *do* work in is flagged for your own judgment, not excluded — see `04-job-evaluation.md`'s Language Gate, the single source of truth for this rule. Translate each category's keywords rather than machine-translating word-for-word (e.g. "Frontend Developer" -> "Desarrollador Frontend", not a literal word-for-word translation) if you work in more than one language.
+**Language scope:** queries in English only (Urdu and Punjabi postings for BD roles are rare). A posting requiring a language not in the Languages table, as a job condition, is excluded. Postings asking for "fluent" English are flagged, not excluded (English is Intermediate).
 
 ## Search Sites
 
-Primary (your market's job boards - scaffold one with `/add-portal`):
-- **[YOUR_JOB_BOARD]** - your market's largest general job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: [YOUR_COUNTRY] / [YOUR_CITY]); also covered by the community `linkedin-search` CLI once installed
-- **[YOUR_INDUSTRY_JOB_BOARD]** - a niche/industry board for your field (optional)
-- **[YOUR_ADDITIONAL_JOB_BOARD]** - another major board for your market (optional)
+Primary (Pakistan job boards), in priority order:
+- **pk.indeed.com** (Indeed Pakistan) - PRIMARY priority
+- **rozee.pk** - Pakistan's largest local board
+- **mustakbil.com** - local board
+- **linkedin.com/jobs** - filter: Lahore, Pakistan; also covered by the community `linkedin-search` CLI once installed
 
-Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies
+Secondary (company career pages via Google): direct `site:` searches for Lahore software houses, IT services, SaaS, fintech and e-commerce companies.
 
 ## Query Categories
 
-Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
+Prioritise **actual Lahore vacancies**. Search broadly, then apply the hard filters strictly. Combine each query with "Lahore" where the site supports it.
 
-Each priority has two kinds of block. **Plain terms** blocks are what the portal CLIs consume: one term per line, one CLI call per term, no `OR`, no `site:` prefix, and no location (the CLI's location flag, or the city in `--query` where that portal's SKILL.md says so, carries it). Quote a multi-word phrase only if the portal's `Query syntax:` line says quoting is honoured. **WebSearch-only** blocks are Google syntax (`site:`, quotes, `OR`) for the fallback path and are never passed to a CLI.
+**Plain terms** blocks are what portal CLIs consume: one term per line, no `OR`, no `site:`, no location. **WebSearch-only** blocks are Google syntax for the fallback path.
 
-**Organize by function, not job title.** The same underlying work carries different titles across companies and markets (a "Data Scientist" role at one employer may be posted as "Insights Analyst" or "Data Consultant" at another). Name each priority category after the function it covers, and list several plausible job titles as query variants within that category rather than betting an entire priority tier on one exact title string.
-
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
-
-These match your strongest and most desired career direction.
+### Priority 1: Business Development and Lead Generation (core target)
 
 #### Plain terms (portal CLIs)
 
 ```
-[YOUR_PRIMARY_JOB_TITLE_1]
-[YOUR_PRIMARY_JOB_TITLE_2]
-[YOUR_KEY_SKILL]
+Business Development Executive
+Business Development Representative
+BDR
+Lead Generation Executive
+Client Acquisition
+Sales Executive
 ```
 
 #### WebSearch-only (`site:` fallback)
 
 ```
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_2]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_COUNTRY]
+site:pk.indeed.com "Business Development Executive" Lahore
+site:pk.indeed.com "Business Development Representative" Lahore
+site:pk.indeed.com "Lead Generation" Lahore
+site:pk.indeed.com "Client Acquisition" Lahore
+site:pk.indeed.com "Sales Executive" Lahore
+site:rozee.pk "Business Development Executive" Lahore
+site:rozee.pk "Lead Generation" Lahore
+site:rozee.pk "Sales Executive" Lahore
+site:mustakbil.com "Business Development" Lahore
+site:linkedin.com/jobs "Business Development Executive" Lahore Pakistan
+site:linkedin.com/jobs "Lead Generation" Lahore Pakistan
 ```
 
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
+### Priority 2: B2B / IT Services / Software Sales
 
-These match your domain expertise.
+Where the software background and LinkedIn Sales Navigator experience are an advantage.
 
 #### Plain terms (portal CLIs)
 
 ```
-[YOUR_DOMAIN_KEYWORD_1]
-[YOUR_DOMAIN_KEYWORD_2]
+B2B Sales
+Sales Navigator
+Software Sales
+IT Sales
+Pre-Sales
 ```
 
 #### WebSearch-only (`site:` fallback)
 
 ```
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
+site:pk.indeed.com "B2B Sales" Lahore
+site:pk.indeed.com "LinkedIn Sales Navigator" Lahore
+site:pk.indeed.com "Software Sales" OR "IT Sales" Lahore
+site:rozee.pk "B2B" "business development" Lahore software
+site:linkedin.com/jobs "B2B Sales" Lahore Pakistan
+site:linkedin.com/jobs "Sales Navigator" Lahore Pakistan
 ```
 
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
-
-Adjacent roles you could pivot into.
+### Priority 3: Adjacent Junior Business Roles
 
 #### Plain terms (portal CLIs)
 
 ```
-[YOUR_ADJACENT_TITLE_1]
-[YOUR_ADJACENT_TITLE_2]
+Business Development Associate
+Account Executive
+Account Manager
+Inside Sales
+Sales Development Representative
+SDR
+Growth Executive
+Marketing and Sales Executive
+Client Relationship Executive
 ```
 
 #### WebSearch-only (`site:` fallback)
 
 ```
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
+site:pk.indeed.com "Account Executive" Lahore
+site:pk.indeed.com "Sales Development Representative" Lahore
+site:pk.indeed.com "Inside Sales" Lahore
+site:rozee.pk "Account Manager" Lahore
+site:rozee.pk "Growth Executive" Lahore
+site:linkedin.com/jobs "Sales Development Representative" Lahore Pakistan
 ```
 
-### Priority 4: Broader Technical / Consulting
-
-Wider net for general technical roles.
+### Priority 4: Broader Sector Searches (wider net)
 
 #### Plain terms (portal CLIs)
 
 ```
-[YOUR_KEY_SKILL] developer
-technical consultant
+Business Development Software House
+Sales SaaS
+Fintech Sales
+E-commerce Sales
+Fresh Graduate Business Development
 ```
 
 #### WebSearch-only (`site:` fallback)
 
 ```
-site:[YOUR_JOB_BOARD] [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
+site:pk.indeed.com "business development" "software house" Lahore
+site:pk.indeed.com sales SaaS OR fintech OR e-commerce Lahore
+site:rozee.pk "fresh" "business development" Lahore
+"business development executive" Lahore hiring software house
 ```
 
 ## Location Filter
 
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
-- [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+Verify every result's location against these tiers:
+- **Ideal:** Shalimar Town, Mughalpura, Baghbanpura, Mall Road, Gulberg, Garden Town, Model Town, Johar Town, Faisal Town, Township, Lahore Cantt and other central Lahore areas
+- **Acceptable:** any other Lahore area, including DHA Lahore, Ferozepur Road, Raiwind Road (check the commute)
+- **Reject:** **Bahria Town and Wapda Town** (user's deal-breaker); any location outside Lahore (Islamabad, Karachi, Faisalabad, etc.); **remote / work from home**
+- **Flag:** hybrid with a Lahore office; postings that say only "Lahore" without an area (acceptable unless the area turns out to be Bahria or Wapda Town)
+
+## Hard Filters to Apply to Every Result
+
+Apply these during `/scrape`'s quick fit assessment and again in `/rank` (full rules in `04-job-evaluation.md`):
+- **Salary:** < PKR 70,000/month = reject; not stated = **"Unknown – Check"** (keep, never reject for lack of salary)
+- **Experience:** requires 3+ years = reject; "2-3 years" = flag; fresher, 0-2 years or unstated = pass
+- **Reject** commission-only, call-centre-style cold-calling / telesales, MLM or network marketing, unpaid trials
+- Do not count the Techfy.io backend role as BD experience
 
 ## Language Filter
 
-Your working languages and levels are in CLAUDE.md's Languages table. When filtering scraped results, apply `04-job-evaluation.md`'s Language Gate: a posting requiring a language you haven't declared at all is excluded; a posting requiring a higher level than you declared in a language you do work in is not excluded, flag it clearly instead (see `job-scraper/SKILL.md`'s Step 3 "Quick Fit Assessment" for how the flag surfaces in `/scrape` output). Postings simply *written* in a language you don't work in, that don't require it on the job, are fine.
+Working languages and levels are in CLAUDE.md's Languages table (Urdu native, English intermediate, Punjabi conversational). Apply `04-job-evaluation.md`'s Language Gate: a posting requiring an undeclared language as a job condition is excluded; "fluent English" is a FLAG shown to the user. Postings simply written in English are fine.
 
 ## Date Filter
 
@@ -127,3 +158,5 @@ Only include jobs posted within the last 14 days, matching `/scrape` Step 1b.3: 
 
 If the user specifies a focus area, select queries from the matching category and also generate 2-3 custom queries for that focus. For example:
 - "/scrape [focus_area]" -> relevant category queries + custom focus-specific queries
+
+Never submit applications, message recruiters, or push to git without the user's explicit approval.

@@ -4,51 +4,43 @@ framework_version: 1.0.0
 
 # Behavioral Profile
 
-<!-- SETUP: This file is populated by running /setup -->
-<!-- You can use results from PI, DISC, Myers-Briggs, StrengthsFinder, or a self-assessment -->
+No formal assessment (PI, DISC, Myers-Briggs, StrengthsFinder) has been taken. The user asked that nothing be invented about weaknesses or preferences, so this file contains **only what the user stated or what their CV says**. Add to it later via `/setup --section skills` or by editing directly.
 
 ## Overview
-[YOUR_NAME]'s behavioral assessment identifies them as a **[PROFILE_TYPE]** pattern. [1-2 SENTENCE_SUMMARY].
+Zain Ul Hassan is a client-facing business development professional with a software engineering background. Self-reported strengths are client communication, B2B lead generation, LinkedIn prospecting, personalized outreach, disciplined follow-up and client handling.
 
 ## Core Behavioral Drives
+Not assessed. Do not assign scores or levels.
 
-| Drive | Level | Meaning |
-|-------|-------|---------|
-| [DRIVE_1] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_2] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_3] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_4] | [LEVEL] | [DESCRIPTION] |
-
-## Strongest Behaviors
-- **[BEHAVIOR_1]:** [DESCRIPTION]
-- **[BEHAVIOR_2]:** [DESCRIPTION]
-- **[BEHAVIOR_3]:** [DESCRIPTION]
+## Strongest Behaviors (self-reported)
+- **Client communication:** keeps communication clear, professional and specific to the client
+- **Personalized outreach and follow-up:** writes personalized messages and proposals rather than reusing templates; follows up consistently
+- **Understanding technical products:** software development background supports credible conversations with technical buyers
 
 ## How You Work Best
-- [ENVIRONMENT_PREFERENCE_1]
-- [ENVIRONMENT_PREFERENCE_2]
-- [ENVIRONMENT_PREFERENCE_3]
+Not stated. Do not infer.
 
-## Growth Areas (frame positively in applications)
-- **[AREA_1]:** [HOW_TO_FRAME_IT_POSITIVELY]
-- **[AREA_2]:** [HOW_TO_FRAME_IT_POSITIVELY]
+## Growth Areas
+Not stated. Do not invent any. If an application or interview needs one, ask the user rather than making one up.
 
 ## Mapping to Job Posting Language
 
-When a job posting mentions these keywords, it's a **strong behavioral fit**:
-- [KEYWORD_OR_PHRASE_THAT_MATCHES_YOUR_STYLE]
-- [ANOTHER_KEYWORD]
+When a job posting mentions these keywords, it's a **strong fit** with stated strengths:
+- B2B sales, business development, lead generation, client acquisition
+- LinkedIn Sales Navigator, outbound prospecting, outreach, follow-up
+- IT services, software, SaaS, technical solutions, client communication
 
-When a job posting mentions these, flag as **potential friction** (not deal-breaker):
-- [KEYWORD_OR_PHRASE_THAT_MIGHT_CLASH]
-- [ANOTHER_KEYWORD]
+When a job posting mentions these, flag as **conflict with deal-breakers** (see CLAUDE.md):
+- Cold calling, telesales, telemarketing, call centre, outbound calling targets
+- Commission only, unpaid training, "unlimited earning potential" with no fixed salary
+- Network marketing, MLM, referral-only income, "be your own boss" pyramid wording
+- Remote, work from home, outside Lahore, Bahria Town, Wapda Town
 
 ## Management Style Preferences
-- [WHAT_MANAGEMENT_STYLE_WORKS_FOR_YOU]
-- [WHAT_DOESN'T_WORK]
+Not stated.
 
 ## Using This in Applications
-- **Cover letters:** [HOW_TO_WEAVE_IN_BEHAVIORAL_STRENGTHS]
-- **CV:** [WHAT_TO_EMPHASIZE]
-- **Interviews:** [WHAT_STAR_EXAMPLES_TO_USE]
-- **Don't overstate:** [WHAT_NOT_TO_CLAIM]
+- **Cover letters:** use only the stated strengths above, with concrete examples from the CV. No invented anecdotes or figures.
+- **CV:** emphasize LinkedIn lead generation, full-cycle B2B sales, and client handling; present the backend role as technical credibility, not as BD experience.
+- **Interviews:** use the STAR stubs in `07-interview-prep.md`, completed by the user with real details.
+- **Don't overstate:** English is Intermediate, so keep letters clear and plain, not ornate. No claimed numbers, revenue or conversion rates. Do not describe the backend role as sales experience.

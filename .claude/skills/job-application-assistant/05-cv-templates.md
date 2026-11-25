@@ -66,7 +66,7 @@ A compile that stops on ``! LaTeX Error: File `<file>' not found`` (a `.sty` or 
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Zain Ul Hassan - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -76,13 +76,17 @@ A compile that stops on ``! LaTeX Error: File `<file>' not found`` (a `.sty` or 
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
+% PRIVACY: this file is tracked by git. Keep [YOUR_PHONE], [YOUR_EMAIL] and
+% [YOUR_LINKEDIN_URL] as placeholders HERE. When /apply generates the gitignored
+% cv/main_<company>_<role>.tex, substitute the real values from
+% documents/cv/contact.md (also gitignored). Never write them into a tracked file.
+\name{Zain}{Ul Hassan}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
+\address{Lahore, Pakistan}{}{}
 \phone[mobile]{[YOUR_PHONE]}
 \email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}}
 
 \begin{document}
 \makecvtitle
@@ -144,11 +148,13 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Business Development / Lead Generation / BDR roles:**
+> B2B business development professional with hands-on LinkedIn-led lead generation, using Sales Navigator to build target account lists and reach decision-makers. Runs the flow from first touch to handover: personalized outreach, discovery calls, qualification, proposals and disciplined follow-up. Has worked with B2B clients across the US, UK and UAE, and brings a software engineering background that supports credible conversations with technical buyers. Seeking a full-time on-site role in Lahore.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For Sales Executive / Client Acquisition roles:**
+> Sales and client-acquisition professional with about two years of B2B experience selling IT and data-extraction services: identifying needs, positioning the right service, pricing engagements, handling proposals and negotiation, and keeping client relationships going after delivery. Comfortable translating technical detail into clear recommendations for clients. Seeking a full-time on-site role in Lahore.
+
+*Grounding rule: every claim comes from `01-candidate-profile.md`. No figures, revenue or conversion numbers exist in the profile; do not add any. Present the Techfy.io backend role as technical background, never as sales experience. English is Intermediate: keep wording plain and clear.*
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 
